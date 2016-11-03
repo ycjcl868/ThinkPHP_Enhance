@@ -1,4 +1,4 @@
-# 全栈自动化配置 [![npm](http://shields.hust.cc/npm-3.10.8-brightgreen.svg) ![node](http://shields.hust.cc/node-4.4.3-green.svg) ![npm](http://shields.hust.cc/npm-3.10.8-brightgreen.svg) ![bower](http://shields.hust.cc/bower-1.7.9-yellow.svg) ![gulp](http://shields.hust.cc/gulp-3.9.1-blue.svg)] 
+# 全栈自动化配置 [![ThinkPHP](http://shields.hust.cc/ThinkPHP-3.2-blue.svg) ![npm](http://shields.hust.cc/npm-3.10.8-brightgreen.svg) ![node](http://shields.hust.cc/node-4.4.3-green.svg) ![npm](http://shields.hust.cc/npm-3.10.8-brightgreen.svg) ![bower](http://shields.hust.cc/bower-1.7.9-yellow.svg) ![gulp](http://shields.hust.cc/gulp-3.9.1-blue.svg)] 
 
 
 > 前端采用Less + Gulp，后端采用ThinkPHP，后台配置composer，前端配置好bower、gulp、node。项目主要目的是快速进行前后端的开发，不必为一些前端公共库(jQuery、AngularJS、VueJS等)，后台PHP扩展到处找，以及不用担心静态文件(CSS、JS、Image)的压缩。修改了ThinkPHP的配置，避免了一些小错误和重复性工作。
