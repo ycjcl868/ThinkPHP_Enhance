@@ -17,6 +17,30 @@
 ### 后台的安装
 在根目录下，直接`composer install  xxx`
 
+### 好用的脚本
+根目录下有`Action.js`脚本，用来**添加/删除控制器**。
+
+![](http://7xi72v.com1.z0.glb.clouddn.com/public/16-11-16/63195246.jpg)
+
+使用方法：
+
+```
+***********Action控制器*************
+usage(用法)：node Action/Action.js [-a/--add 添加控制器] [-d/--del 删除控制器] 控制器名
+例如：添加一个名为UserAction.class.php的控制器，node Action -a User
+且自动首字母大写
+```
+
+例如：
+添加一个User控制器：
+
+![](http://7xi72v.com1.z0.glb.clouddn.com/public/16-11-16/78330601.jpg)
+
+要删除一个User控制器：
+
+![](http://7xi72v.com1.z0.glb.clouddn.com/public/16-11-16/76383981.jpg)
+
+
 ### 静态文件的压缩
 
 >  开发和部署分两个文件夹，开发时就用的`Apps/Home/View/[css,js,images]`，部署就用`Apps/Home/min`里面的[css,js,images]，这样就比较方便。**我只是压缩了Home目录的**
@@ -28,6 +52,7 @@
 如果要加目录(比如整个后台Admin)，得在根目录下的`gulpfile.js`进行修改：
 
 ![](http://7xi72v.com1.z0.glb.clouddn.com/16-11-3/91474908.jpg)
+
 
 
 > 第一次写，大牛勿喷。有更好的建议，欢迎fork！

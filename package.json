@@ -1,14 +1,15 @@
 {
-  "name": "zhaofudao",
+  "name": "ThinkPHP_Kylin",
   "version": "1.0.0",
   "description": "前端自动化",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp-concat": "^2.6.0",
-    "gulp-uglify": "^1.5.2",
-    "gulp-rename": "^1.2.2",
     "del": "^2.2.0",
-    "gulp-minify-css": "^1.2.3"
+    "gulp-concat": "^2.6.0",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.2",
+    "yargs": "^6.4.0"
   },
   "devDependencies": {
     "del": "^2.2.0",
