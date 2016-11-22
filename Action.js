@@ -14,13 +14,19 @@ if(action){
         // 添加控制器
         // 过滤一些非常规字符
         var name = filterStr(argv.a);
-        var buf = new Buffer('<?php\nnamespace Home\\Action;\nuse Think\\Action;\nclass '+name+'Action extends Action {\n    public function index() {\n  \n    }\n}');
-        fs.writeFile('./Apps/Home/Action/'+name+'Action.class.php',buf,function (err, fd) {
-            if(err){
-                return console.error(err);
-            }
-            console.log(name+'Action.class.php 创建成功');
-        })
+        if(name != 'Base'){
+            var buf = new Buffer('<?php\nnamespace Home\\Action;\nuse Think\\Action;\nclass '+name+'Action extends BaseAction {\n    public function index() {\n  \n    }\n}');
+            fs.writeFile('./Apps/Home/Action/'+name+'Action.class.php',buf,function (err, fd) {
+                if(err){
+                    return console.error(err);
+                }
+                console.log(name+'Action.class.php 创建成功');
+            })           
+        }else{
+            console.log('不能创建BaseAction');
+            return;
+        }
+
 
 
 
@@ -29,12 +35,18 @@ if(action){
         var name2 = filterStr(argv.d);
         var url = './Apps/Home/Action/'+name2+'Action.class.php';
         if(fs.existsSync(url)){
-            fs.unlink(url,function (err) {
-                if(err){
-                    return console.error(err);
-                }
-                console.log(name2+'Action.class.php 删除成功');
-            })
+            if(name2 != 'Base'){
+                fs.unlink(url,function (err) {
+                    if(err){
+                        return console.error(err);
+                    }
+                    console.log(name2+'Action.class.php 删除成功');
+                })              
+            }else{
+                console.log('不能删除BaseAction');
+                return;
+            }
+
         }else{
             console.log(fs.existsSync(url));
             console.log('没有'+name2+'Action.class.php控制器');
