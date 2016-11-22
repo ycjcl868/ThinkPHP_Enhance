@@ -14,7 +14,7 @@ if(action){
         // 添加控制器
         // 过滤一些非常规字符
         var name = filterStr(argv.a);
-        var buf = new Buffer('<?php\nnamespace Home\\Action;\nuse Think\Action;\nclass '+name+'Action extends Action {\n    public function index() {\n  \n    }\n}');
+        var buf = new Buffer('<?php\nnamespace Home\\Action;\nuse Think\\Action;\nclass '+name+'Action extends Action {\n    public function index() {\n  \n    }\n}');
         fs.writeFile('./Apps/Home/Action/'+name+'Action.class.php',buf,function (err, fd) {
             if(err){
                 return console.error(err);
